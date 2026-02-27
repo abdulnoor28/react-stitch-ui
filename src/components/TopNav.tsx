@@ -24,16 +24,15 @@ const TopNav = ({ onMenuClick }: TopNavProps) => {
         >
           <Menu className="w-5 h-5" />
         </button>
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-            <svg className="w-4 h-4 text-primary-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-          </div>
-          <span className="font-semibold text-foreground hidden sm:inline">Legal Literacy AI</span>
-        </div>
+        <Link to="/" className="flex items-center gap-1.5">
+          <span className="text-xl font-bold text-primary tracking-tight">Lexi</span>
+          <span className="text-xl font-bold text-foreground tracking-tight">Chat</span>
+        </Link>
       </div>
       <nav className="flex items-center gap-6">
+        <Link to="/" className={linkClass("/")}>
+          Home
+        </Link>
         <Link to="/how-it-works" className={linkClass("/how-it-works")}>
           How it works
         </Link>
